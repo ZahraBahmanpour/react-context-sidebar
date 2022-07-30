@@ -3,6 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import styles from "./sidebar.module.css";
 import SidebarMenu from "./sidebarMenu/SidebarMenu";
 import SidebarSocials from "./sidebarSocials/SidebarSocials";
+import ReactDOM from "react-dom";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar, direction } = useGlobalContext();
@@ -15,7 +16,7 @@ const Sidebar = () => {
       ? `${styles["sidebar-rtl"]}`
       : `${styles["sidebar-ltr"]}`;
 
-  return (
+  return ReactDOM.createPortal(
     <aside className={`${openClass} ${directionClass}`}>
       <div className={styles["sidebar-header"]}>
         <button className={styles["close-btn"]} onClick={closeSidebar}>
@@ -24,7 +25,8 @@ const Sidebar = () => {
       </div>
       <SidebarMenu />
       <SidebarSocials />
-    </aside>
+    </aside>,
+    document.getElementById("sidebar")
   );
 };
 
