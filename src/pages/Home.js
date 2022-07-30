@@ -1,4 +1,3 @@
-import React from "react";
 import { FaBars, FaLanguage } from "react-icons/fa";
 import { useGlobalContext } from "../context";
 
