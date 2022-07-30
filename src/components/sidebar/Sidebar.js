@@ -1,8 +1,8 @@
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../../context";
 import { FaTimes } from "react-icons/fa";
-import { links, social } from "./data";
+import { links, social } from "../../data";
 import styles from "./sidebar.module.css";
-import { i18n } from "./i18n";
+import { i18n } from "../../i18n";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar, direction } = useGlobalContext();
