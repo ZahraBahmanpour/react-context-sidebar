@@ -2,6 +2,7 @@ import { useGlobalContext } from "../../../context";
 import { i18n } from "../../../i18n";
 import styles from "./sidebarMenu.module.css";
 import { links } from "../../../data";
+import { Link } from "react-router-dom";
 
 export default function SidebarMenu() {
   const { direction } = useGlobalContext();
@@ -12,10 +13,10 @@ export default function SidebarMenu() {
         const { id, url, icon } = links[link];
         return (
           <li key={id}>
-            <a href={url}>
+            <Link to={url}>
               {icon}
               {translation[link]}
-            </a>
+            </Link>
           </li>
         );
       })}
