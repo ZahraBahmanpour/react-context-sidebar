@@ -1,7 +1,13 @@
+import { useGlobalContext } from "../context";
+import { i18n } from "../i18n";
+
 export default function Home() {
+  const { direction } = useGlobalContext();
+  const translation =
+    direction === "rtl" ? i18n.pageHeading.fa : i18n.pageHeading.en;
   return (
     <div className="container">
-      <h2>Home Page</h2>
+      <h2>{translation.welcome}</h2>
     </div>
   );
 }

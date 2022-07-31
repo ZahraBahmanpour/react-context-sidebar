@@ -13,4 +13,14 @@ export const i18n = {
       documents: "اسناد",
     },
   },
+  pageHeading: {
+    en: {
+      welcome: "Welcome!",
+      meet: "Meet Our Team",
+    },
+    fa: {
+      welcome: "خوش آمدید",
+      meet: "تیم ما",
+    },
+  },
 };
