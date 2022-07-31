@@ -1,22 +1,7 @@
-import { FaBars, FaLanguage } from "react-icons/fa";
-import { useGlobalContext } from "../context";
-import { Outlet } from "react-router-dom";
-
-const Home = () => {
-  const { openSidebar, direction, toggleDirection } = useGlobalContext();
+export default function Home() {
   return (
-    <>
-      <main style={{ direction }}>
-        <button onClick={openSidebar} className="sidebar-toggle">
-          <FaBars />
-        </button>
-        <button onClick={toggleDirection} className="language-toggle">
-          <FaLanguage />
-        </button>
-      </main>
-      <Outlet />
-    </>
+    <div className="container">
+      <h2>Home Page</h2>
+    </div>
   );
-};
-
-export default Home;
+}

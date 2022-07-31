@@ -252,3 +252,9 @@ Sidebar
     width: 400px;
   }
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

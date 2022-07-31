@@ -1,10 +1,7 @@
-function Team() {
-  console.log("dsds");
+export default function Team() {
   return (
-    <>
-      <h2>Meet Our Team</h2>
-    </>
+    <div className="container">
+      <h2>Meet Out Team</h2>
+    </div>
   );
 }
-
-export default Team;
