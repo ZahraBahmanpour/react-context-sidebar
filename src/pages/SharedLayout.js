@@ -1,5 +1,5 @@
 import { FaBars, FaLanguage } from "react-icons/fa";
-import { useGlobalContext } from "../context";
+import { useGlobalContext } from "../utils/context";
 import { Outlet } from "react-router-dom";
 
 const SharedLayout = () => {

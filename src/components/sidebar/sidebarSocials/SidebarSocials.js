@@ -1,5 +1,5 @@
 import styles from "./sidebarSocials.module.css";
-import { social } from "../../../data";
+import { social } from "../../../utils/data";
 
 export default function SidebarSocials() {
   return (

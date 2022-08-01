@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../context";
+import { useGlobalContext } from "../../utils/context";
 import { FaTimes } from "react-icons/fa";
 import styles from "./sidebar.module.css";
 import SidebarMenu from "./sidebarMenu/SidebarMenu";

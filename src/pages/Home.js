@@ -1,5 +1,5 @@
-import { useGlobalContext } from "../context";
-import { i18n } from "../i18n";
+import { useGlobalContext } from "../utils/context";
+import { i18n } from "../utils/i18n";
 
 export default function Home() {
   const { direction } = useGlobalContext();

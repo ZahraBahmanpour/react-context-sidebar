@@ -1,7 +1,7 @@
-import { useGlobalContext } from "../../../context";
-import { i18n } from "../../../i18n";
+import { useGlobalContext } from "../../../utils/context";
+import { i18n } from "../../../utils/i18n";
 import styles from "./sidebarMenu.module.css";
-import { links } from "../../../data";
+import { links } from "../../../utils/data";
 import { Link } from "react-router-dom";
 
 export default function SidebarMenu() {
