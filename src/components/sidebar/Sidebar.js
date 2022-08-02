@@ -8,7 +8,11 @@ import ReactDOM from "react-dom";
 const Sidebar = () => {
   // const { isSidebarOpen, closeSidebar, direction } = useGlobalContext();
   const {
-    state: { direction, isSidebarOpen },
+    state: {
+      direction,
+      isSidebarOpen,
+      userInfo: { username },
+    },
     dispatch,
   } = useGlobalContext();
   const openClass = isSidebarOpen
@@ -23,6 +27,7 @@ const Sidebar = () => {
   return ReactDOM.createPortal(
     <aside className={`${openClass} ${directionClass}`}>
       <div className={styles["sidebar-header"]}>
+        {username}
         <button
           className={styles["close-btn"]}
           onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}

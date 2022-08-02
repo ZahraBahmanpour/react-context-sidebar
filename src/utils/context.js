@@ -44,6 +44,9 @@ import { useContext, createContext, useReducer } from "react";
 const initialState = {
   isSidebarOpen: false,
   direction: "ltr",
+  userInfo: JSON.parse(localStorage.getItem("userInfo"))
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : "",
 };
 const AppContext = createContext();
 
@@ -53,6 +56,8 @@ const reducer = (state, action) => {
       return { ...state, isSidebarOpen: !state.isSidebarOpen };
     case "TOGGLE_DIRECTION":
       return { ...state, direction: state.direction === "ltr" ? "rtl" : "ltr" };
+    case "USER_LOGIN":
+      return { ...state, userInfo: action.payload };
     default:
       return state;
   }
