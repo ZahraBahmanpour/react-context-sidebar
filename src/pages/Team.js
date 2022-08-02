@@ -2,7 +2,9 @@ import { useGlobalContext } from "../utils/context";
 import { i18n } from "../utils/i18n";
 
 export default function Team() {
-  const { direction } = useGlobalContext();
+  const {
+    state: { direction },
+  } = useGlobalContext();
   const translation =
     direction === "rtl" ? i18n.pageHeading.fa : i18n.pageHeading.en;
   return (

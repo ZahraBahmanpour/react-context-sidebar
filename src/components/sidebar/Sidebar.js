@@ -6,7 +6,11 @@ import SidebarSocials from "./sidebarSocials/SidebarSocials";
 import ReactDOM from "react-dom";
 
 const Sidebar = () => {
-  const { isSidebarOpen, closeSidebar, direction } = useGlobalContext();
+  // const { isSidebarOpen, closeSidebar, direction } = useGlobalContext();
+  const {
+    state: { direction, isSidebarOpen },
+    dispatch,
+  } = useGlobalContext();
   const openClass = isSidebarOpen
     ? `${styles.sidebar} ${styles["show-sidebar"]}`
     : `${styles.sidebar}`;
@@ -19,7 +23,10 @@ const Sidebar = () => {
   return ReactDOM.createPortal(
     <aside className={`${openClass} ${directionClass}`}>
       <div className={styles["sidebar-header"]}>
-        <button className={styles["close-btn"]} onClick={closeSidebar}>
+        <button
+          className={styles["close-btn"]}
+          onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}
+        >
           <FaTimes />
         </button>
       </div>

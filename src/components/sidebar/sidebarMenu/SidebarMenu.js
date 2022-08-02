@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 import { useStyles } from "./style";
 
 export default function SidebarMenu() {
-  const { direction } = useGlobalContext();
+  // const { direction } = useGlobalContext();
+  const {
+    state: { direction },
+  } = useGlobalContext();
   const classes = useStyles({ direction });
   const translation = direction === "rtl" ? i18n.links.fa : i18n.links.en;
   return (
